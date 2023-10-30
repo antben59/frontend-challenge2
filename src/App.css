@@ -1,3 +1,12 @@
+:root {
+    --primary-orange: #e9ab53;
+    --primary-red: #f15e50;
+    --neutral-off-white: #fffdfa;
+    --neutral-grayish-blue: #c5c6ce;
+    --neutral-dark-grayish-blue: #5d5f79;
+    --neutral-very-dark-blue: #00001a;
+}
+
 @font-face {
     font-family: "Inter";
     src: url("assets/fonts/static/Inter-Regular.ttf");
@@ -18,5 +27,19 @@ body {
     height: 100vh;
     font-family: "Inter";
     font-weight: 400;
+}
+
+h1 {
+    font-family: "Inter Extra Bold";
+    font-weight: 800;
+}
+
+h2 {
+    font-family: "Inter Bold";
+    font-weight: 700;
+}
+
+p {
+    font-size: 15px;
 }
 
