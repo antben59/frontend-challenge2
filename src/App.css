@@ -27,19 +27,62 @@ body {
     height: 100vh;
     font-family: "Inter";
     font-weight: 400;
+    margin: 0;
 }
+
+
 
 h1 {
     font-family: "Inter Extra Bold";
     font-weight: 800;
+    font-size: 40px;
+    padding: 20px 0px;
+    margin: 0;
 }
 
-h2 {
+h2, h3 {
     font-family: "Inter Bold";
     font-weight: 700;
 }
 
+h2 {
+    margin: 0 0 35px 0;
+    font-size: 32px;
+}
+
 p {
     font-size: 15px;
+
+}
+
+.orange {
+    color: var(--primary-orange);
+}
+
+.off-white {
+    color: var(--neutral-off-white)
+}
+
+/* Mobile */
+
+.app { 
+    padding: 0px 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    margin: 0;
+    padding: 30px 0px;
+}
+
+main {
+
+}
+
+aside {
+    padding: 25px;
+    background-color: var(--neutral-very-dark-blue);
 }
 
