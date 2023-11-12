@@ -4,11 +4,15 @@ import articleFirstImg from '../assets/images/image-web-3-mobile.jpg';
 import gridArticle1 from '../assets/images/image-retro-pcs.jpg';
 import gridArticle2 from '../assets/images/image-top-laptops.jpg';
 import gridArticle3 from '../assets/images/image-gaming-growth.jpg';
+import Menu from './Menu';
 
 function App() {
+
   return (
     <div className='app'>
-      <Header></Header>
+
+      <Menu />
+      <Header />
 
       <main>
         <article className='article-1'>
