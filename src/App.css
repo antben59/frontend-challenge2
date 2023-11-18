@@ -101,9 +101,18 @@ p {
 }
 
 .logo {
-    width: 50px;
+    width: 40px;
     height: auto;
     color: var(--neutral-very-dark-blue);
+}
+
+.icon-menu {
+    width: 40px;
+    height: auto;
+}
+
+.icon-menu:hover {
+    cursor: pointer;   
 }
 
 header {
@@ -142,16 +151,7 @@ section {
     gap: 25px;
 }
 
-.icon-menu {
-    width: 50px;
-    height: auto;
-}
-
-.icon-menu:hover {
-    cursor: pointer;   
-}
-
-article.article-1, article.article-2 {
+.article-1, .article-2 {
     display: flex;
     flex-direction: column;
 }
@@ -162,10 +162,16 @@ article.article-1, article.article-2 {
 
 .img-article-1 {
     width: 100%;
-    height: 400px;
+    height: 300px;
     background-image: url("./assets/images/image-web-3-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.article-1-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .article-2 {
@@ -178,7 +184,7 @@ article.article-1, article.article-2 {
     cursor: pointer;
 }
 
-.article-3 {
+/* .article-3 {
     display: grid;
     grid-template: 
         "img    h2 " auto
@@ -211,7 +217,7 @@ article.article-1, article.article-2 {
 .article-3 p{
     grid-area: p;
     color: var(--neutral-dark-grayish-blue);
-}
+} */
 
 .container-menu {
     display: none;
@@ -276,7 +282,7 @@ article.article-1, article.article-2 {
 @media screen and (min-width: 1440px) {
 
     .app {
-        padding: 0 100px 100px 100px;
+        padding: 0 165px 100px 165px;
     }
 
     /* Menu */
@@ -297,7 +303,12 @@ article.article-1, article.article-2 {
     .menu-content { 
         flex-direction: row;
         width: auto;
-        gap: 50px;
+        gap: 40px;
+        padding: 20px 0;
+    }
+
+    .menu-content a {
+        font-size: 16px;
     }
 
     .close {
@@ -306,47 +317,109 @@ article.article-1, article.article-2 {
 
     /* END Menu */
 
-    /* Grid template */
+    /* Main content */
 
     main {
         display: grid;
-        grid-template: 
-        "main-article   aside" auto
-        "article-list   article-list" auto / 
-        2fr             1fr;
-
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 300px 1fr auto;
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
     }
-
+    
     .article-1 {
+        grid-area: 1 / 1 / 3 / 3;
+
         display: grid;
-        grid-template:
-        "img-article    img-article" auto
-        "title-article  content-article" auto /
-        auto            auto;
-        grid-area: main-article;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 300px 1fr;
+        grid-row-gap: 30px;
+        grid-column-gap: 30px;
     }
 
-    .article-1 span {
-        grid-area: img-article;
+    .article-1 .img-article-1 {
+        grid-area: 1 / 1 / 2 / 3;
+        height: auto;
+        background-image: url('./assets/images/image-web-3-desktop.jpg');    
     }
 
     .article-1 h1 {
-        grid-area: title-article;
+        display: flex;
+        grid-area: 2 / 1 / 3 / 2;
+        align-items: center;
+        font-size: 52px;
     }
 
-    .article-1 p, .article-1 button {
-        grid-area: content-article;
+    .article-1-content {
+        display: flex;
+        flex-direction: column;
+        gap:0;
+        justify-content: space-between;
+        grid-area: 2 / 2 / 3 / 3;
     }
 
     aside {
-        grid-area: aside;
+        grid-area: 1 / 3 / 3 / 4;
     }
 
     section {
-        grid-area: article-list;
+        grid-area: 3 / 1 / 4 / 4;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .article-3 {
+        display: flex;
+        gap: 25px;
+    }
+
+    .article-3-content {
+        
+    }
+
+    .article-3 img {
+        width: 100px;
+        height: auto;
+    }
+
+    .article-3 h2 {
+        width: fit-content;
+    }
+
+    .article-3 h3 {
+        width: fit-content;
+    }
+
+    .article-3 p {
+        width: inherit;
+    }
+
+    /* .article-3 {
+        display: grid;
+        grid-template: 
+            "img    h2 " auto
+            "img    h3 " auto 
+            "img    p " auto /
+            100px   auto;
+        column-gap: 20px;
+        row-gap: 8px;
+    }       
+    
+    .article-3 img{
+        grid-area: img;
+        width: 100%;
     }
     
-    /* END Grid Template */
+    .article-3 h2{
+        grid-area: h2;
+        color: var(--neutral-grayish-blue);
+    }
+    
+    .article-3 h3{
+        grid-area: h3;
+    } */
+
+    /* END Main content */
 }
 
 /* END Desktop */

@@ -1,6 +1,6 @@
 import '../App.css';
 import Header from './Header';
-import articleFirstImg from '../assets/images/image-web-3-mobile.jpg';
+// import articleFirstImg from '../assets/images/image-web-3-mobile.jpg';
 import gridArticle1 from '../assets/images/image-retro-pcs.jpg';
 import gridArticle2 from '../assets/images/image-top-laptops.jpg';
 import gridArticle3 from '../assets/images/image-gaming-growth.jpg';
@@ -16,8 +16,10 @@ function App() {
         <article className='article-1'>
           <span className='img-article-1' />
           <h1 className='dark-blue '>The Bright Future of Web 3.0?</h1>
-          <p className='dark-grayish-blue '>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promine ?</p>
-          <button className='button'>Read more</button>
+          <div className='article-1-content'>
+            <p className='dark-grayish-blue '>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promine ?</p>
+            <button className='button'>Read more</button>
+          </div>
         </article>
 
         <aside>
@@ -40,24 +42,30 @@ function App() {
 
         <section>
           <article className='article-3'>
-            <img src={gridArticle1} />
-            <h2>01</h2>
-            <h3>Reviving Retro PCs</h3>
-            <p>What happens when old PCs are given modern upgrades?</p>
+            <img src={gridArticle1} alt='Retro pc' />
+            <div className='article-3-content'>
+              <h2>01</h2>
+              <h3>Reviving Retro PCs</h3>
+              <p>What happens when old PCs are given modern upgrades?</p>
+            </div>
           </article>
 
           <article className='article-3'>
-            <img src={gridArticle2} />
-            <h2>02</h2>
-            <h3>Top 10 Laptops of 2022</h3>
-            <p>Our best picks for various needs and budgets.</p>
+            <img src={gridArticle2} alt='Top laptop' />
+            <div className='article-3-content'>
+              <h2>02</h2>
+              <h3>Top 10 Laptops of 2022</h3>
+              <p>Our best picks for various needs and budgets.</p>
+            </div>
           </article>
 
           <article className='article-3'>
-            <img src={gridArticle3} />
-            <h2>03</h2>
-            <h3>The Growth of Gaming</h3>
-            <p>How the pandemic has sparked fresh opportunities.</p>
+            <img src={gridArticle3} alt='Gaming growth' />
+            <div className='article-3-content'>
+              <h2>03</h2>
+              <h3>The Growth of Gaming</h3>
+              <p>How the pandemic has sparked fresh opportunities.</p>
+            </div>
           </article>
         </section>
       </main>
