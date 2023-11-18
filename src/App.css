@@ -89,10 +89,15 @@ p {
     border: none;
 }
 
+.button:hover {
+    background-color: var(--neutral-very-dark-blue);
+    cursor: pointer;
+}
+
 /* Mobile first */
 
 .app { 
-    padding: 0px 20px;
+    padding: 0 20px 20px 20px;
 }
 
 .logo {
@@ -142,6 +147,10 @@ section {
     height: auto;
 }
 
+.icon-menu:hover {
+    cursor: pointer;   
+}
+
 article.article-1, article.article-2 {
     display: flex;
     flex-direction: column;
@@ -151,9 +160,22 @@ article.article-1, article.article-2 {
     gap: 20px;
 }
 
+.img-article-1 {
+    width: 100%;
+    height: 400px;
+    background-image: url("./assets/images/image-web-3-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .article-2 {
     gap: 10px;
     
+}
+
+.article-2 h3:hover {
+    color: var(--primary-orange);
+    cursor: pointer;
 }
 
 .article-3 {
@@ -181,13 +203,14 @@ article.article-1, article.article-2 {
     grid-area: h3;
 }
 
+.article-3 h3:hover {
+    color: var(--primary-red);
+    cursor: pointer;
+}
+
 .article-3 p{
     grid-area: p;
     color: var(--neutral-dark-grayish-blue);
-}
-
-body {
-    font-family: Arial, sans-serif;
 }
 
 .container-menu {
@@ -201,7 +224,7 @@ body {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.container-menu .active {
+.container-menu.active {
     display: block;
 }
 
@@ -224,6 +247,11 @@ body {
     color: var(--neutral-very-dark-blue);
 }
 
+.menu-content a:hover {
+    color: var(--primary-red);
+    cursor: pointer;
+}
+
 .close {
     display: block;
     background-image: url("./assets/images/icon-menu-close.svg");
@@ -241,6 +269,90 @@ body {
     cursor: pointer;
 }
 
+/* END Mobile */
+
+/* Desktop */
+
+@media screen and (min-width: 1440px) {
+
+    .app {
+        padding: 0 100px 100px 100px;
+    }
+
+    /* Menu */
+
+    .icon-menu {
+        display: none;
+    }
+
+    .container-menu {
+        display: block;
+        position: relative;
+        z-index:auto;
+        float: right;
+        height: auto;
+        background-color: var(--neutral-off-white);
+    }
+
+    .menu-content { 
+        flex-direction: row;
+        width: auto;
+        gap: 50px;
+    }
+
+    .close {
+        display: none;
+    }
+
+    /* END Menu */
+
+    /* Grid template */
+
+    main {
+        display: grid;
+        grid-template: 
+        "main-article   aside" auto
+        "article-list   article-list" auto / 
+        2fr             1fr;
+
+    }
+
+    .article-1 {
+        display: grid;
+        grid-template:
+        "img-article    img-article" auto
+        "title-article  content-article" auto /
+        auto            auto;
+        grid-area: main-article;
+    }
+
+    .article-1 span {
+        grid-area: img-article;
+    }
+
+    .article-1 h1 {
+        grid-area: title-article;
+    }
+
+    .article-1 p, .article-1 button {
+        grid-area: content-article;
+    }
+
+    aside {
+        grid-area: aside;
+    }
+
+    section {
+        grid-area: article-list;
+    }
+    
+    /* END Grid Template */
+}
+
+/* END Desktop */
+
+/* Animations */
+
 @keyframes slideFromRight {
     0% {
         transform: translateX(100%);
@@ -249,46 +361,5 @@ body {
         transform: translateX(0%);
     }
 }
-/* END Mobile */
 
-/* Hover elements */
-
-nav a:hover {
-    color: var(--primary-red);
-    cursor: pointer;
-}
-
-.button:hover {
-    background-color: var(--neutral-very-dark-blue);
-    cursor: pointer;
-}
-
-.icon-menu:hover {
-    cursor: pointer;   
-}
-
-.menu-content a:hover {
-    color: var(--primary-red);
-    cursor: pointer;
-}
-
-.article-2 h3:hover {
-    color: var(--primary-orange);
-    cursor: pointer;
-}
-
-.article-3 h3:hover {
-    color: var(--primary-red);
-    cursor: pointer;
-}
-
-/* END Hover elements */
-
-/* Active state */
-
-
-
-/* END Active state */
-
-/* Desktop */
-
+/* END Animations */

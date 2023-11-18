@@ -4,19 +4,17 @@ import articleFirstImg from '../assets/images/image-web-3-mobile.jpg';
 import gridArticle1 from '../assets/images/image-retro-pcs.jpg';
 import gridArticle2 from '../assets/images/image-top-laptops.jpg';
 import gridArticle3 from '../assets/images/image-gaming-growth.jpg';
-import Menu from './Menu';
 
 function App() {
 
   return (
     <div className='app'>
 
-      <Menu />
       <Header />
 
       <main>
         <article className='article-1'>
-          <img src={articleFirstImg} alt="Geometric forms article" width="100%" />
+          <span className='img-article-1' />
           <h1 className='dark-blue '>The Bright Future of Web 3.0?</h1>
           <p className='dark-grayish-blue '>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promine ?</p>
           <button className='button'>Read more</button>
